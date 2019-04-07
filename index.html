@@ -56,8 +56,10 @@
         <nav>
           <div class="nav-wrapper">
             <ul id="nav-mobile" class="left">
-              <li id="menu-page-one"><a href="#">Page 1</a></li>
-              <li id="menu-page-two"><a href="#">Page 2</a></li>
+              <li id="menu-page-one"><a href="#">Startpage</a></li>
+              <li id="menu-page-two"><a href="#">API's</a></li>
+              <li id="menu-page-three"><a href="#">Names</a></li>
+              <li id="menu-page-four"><a href="#">Jokes</a></li>
             </ul>
           </div>
         </nav>
@@ -67,21 +69,22 @@
     <div id="page-one">
       <div class="row">
         <div class="col s12 m6">
-          <h4>Single page API app</h4>
-          <p>Go to page 2 and find an API of your liking. Then begin coding a complete web-app to suit your needs.</p>
-          <p>Below this text, you can see an example of how to pull API data into your app. The page basically uses
-            three techonologies to make this happen:</p>
-          <ol>
-            <li><a href="https://api.jquery.com/">jQuery</a> - to make asynchronous API calls and manipulate DOM
-              elements.</li>
-            <li><a href="https://handlebarsjs.com/">Handlebars.js</a> - to make HTML templates and insert well-formatted
-              JSON.</li>
-            <li><a href="https://materializecss.com/">Materialize.css</a> - to make the page look great.</li>
-          </ol>
-          <hr />
-          <h5>Example card from the Bored api</h5>
+          <h4>In progress</h4>
+          <p>With this app you can do different things. On this page you can get inspired to do an activity if you get bored.
+          Page 2 I only use for API inspiration. But you can go to page 3 which contains a name generator, or page 4 where you find 
+          random jokes.
+          </p>
+          <h5>Are you bored? Then click the botton below and take a look at these ideas</h5>
         </div>
       </div>
+      <div class="row">
+          <div class="col s12 m3">
+            <!--Her opretter jeg en knap man kan klikke på hvorefter noget data fra en bestemt side dukker op-->
+            <a class="waves-effect waves-light btn-large" onclick="getApiData('random?auth=null')">
+              <!--Indsætter et icon på knappen og et navn-->
+              <i class="material-icons right">face</i>Ideas</a>
+          </div>
+        </div>
       <div id="api-component-page-one">
       </div>
     </div>
@@ -92,10 +95,12 @@
           <h4>Page 2</h4>
           <p>Click the button to get suggestions for public API's with no authentication.</p>
           <p>Follow the link to see the API documentation. Remark: every API has one or more "endpoints" - this is
-            basically a root url to access the API. Then most API's have additional "query values", which is used to specify further parameters. 
+            basically a root url to access the API. Then most API's have additional "query values", which is used to
+            specify further parameters.
             <p>For example:
-              <ul><li>Root url: "https://www.boredapi.com/api/activity"</li>
-              <li>Querystring: "?participants=4"</li>
+              <ul>
+                <li>Root url: "https://www.boredapi.com/api/activity"</li>
+                <li>Querystring: "?participants=4"</li>
               </ul>
               By connecting these two strings in an AJAX call, you will receive a JSON formatted acitivity for 4 people
             </p>
@@ -114,6 +119,51 @@
       </div>
     </div>
 
+    <!--Her "tegner" jeg hvordan det visuelle på side tre skal se ud-->
+    <div id="page-three">
+      <div class="row">
+        <div class="col s12 m6">
+          <h4>Name generator</h4>
+          <p>Here you can get a random name by first choosing a gender. It will then get you a random name 
+            from somewhere in the world. If you are not happy with the given name, just click the button again.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col s12 m3">
+              <!--Her opretter jeg en knap man kan klikke på hvorefter noget data fra en bestemt side dukker op-->
+            <a class="waves-effect waves-light btn-large" onclick="getRandomFemalename('random?auth=null')">
+              <!--Indsætter et icon på knappen og et navn-->
+              <i class="material-icons right">add</i>Female</a>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m3">
+              <a class="waves-effect waves-light btn-large" onclick="getRandomMalename('random?auth=null')">
+                <i class="material-icons right">call_made</i>Male</a>
+            </div>
+          </div>
+      <div id="api-component-page-three">
+      </div>
+    </div>
+
+    <div id="page-four">
+        <div class="row">
+          <div class="col s12 m6">
+            <h4>Joke generator</h4>
+            <p>Get a random joke</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m3">
+              <a class="waves-effect waves-light btn-large" onclick="getRandomJoke('random?auth=null')">
+                <i class="material-icons right">insert_emoticon</i>Joke</a>
+            </div>
+          </div>
+        <div id="api-component-page-four">
+        </div>
+      </div>
+
   </div>
 
 
@@ -128,11 +178,9 @@
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">{{type}}</span>
+              <span class="card-title">Type: {{type}}</span>
               <p>{{activity}}</p>
             </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
             </div>
           </div>
       </div>
@@ -162,6 +210,34 @@
       </div>
     </div>
 </script>
+  <script id="api-card-template-three" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">{{name}} {{surname}}</span>
+              <p>Region: {{region}}</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</script>
+<script id="api-card-template-four" type="text/x-handlebars-template">
+  <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Type: {{type}}</span>
+            <p>{{setup}}</p>
+            <p>Punchline: {{punchline}}</p>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</script>
+
 
   <!-- Page functionality - Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -174,10 +250,18 @@
     var apiSourceTwo = $("#api-card-template-two").html();
     var apiTemplateTwo = Handlebars.compile(apiSourceTwo);
 
+    // Setup handlebars for third API card
+    var apiSourceThree = $("#api-card-template-three").html();
+    var apiTemplateThree = Handlebars.compile(apiSourceThree);
+
+    // Setup handlebars for fourth API card
+    var apiSourceFour = $("#api-card-template-four").html();
+    var apiTemplateFour = Handlebars.compile(apiSourceFour);
+
     //Functions to actually get JSON data from external API's. When .done is called, you receive the data
-    function getApiData(someparam) {
+    function getApiData() {
       $.ajax({
-        url: "https://www.boredapi.com/api/activity?participants=" + someparam,
+        url: "https://www.boredapi.com/api/activity?participants=",
       }).done(function (data) {
         console.log(data);
         $('#api-component-page-one').html(apiTemplate(data));
@@ -193,21 +277,66 @@
       });
     }
 
+    function getRandomFemalename() {
+      $.ajax({
+        url: "https://uinames.com/api/?gender=female",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-three').html(apiTemplateThree(data));
+      });
+    }
+
+    function getRandomMalename() {
+      $.ajax({
+        url: "https://uinames.com/api/?gender=male",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-three').html(apiTemplateThree(data));
+      });
+    }
+
+    function getRandomJoke() {
+      $.ajax({
+        url: "https://official-joke-api.appspot.com/random_joke",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-four').html(apiTemplateFour(data));
+      });
+    }
+
     //Handle menu - first show page one no matter what
-    getApiData(1)
     $('#page-two').hide();
+    $('#page-three').hide();
+    $('#page-four').hide();
 
     //When someone clicks the page one navigation link
     //This is the second way to make something happen, when you click an HTML element
     $('#menu-page-one').click(function () {
-      getApiData(1)
       $('#page-one').show();
       $('#page-two').hide();
+      $('#page-three').hide();
+      $('#page-four').hide();
     });
     //When someone clicks the page two navigation link
     $('#menu-page-two').click(function () {
       $('#page-one').hide();
       $('#page-two').show();
+      $('#page-three').hide();
+      $('#page-four').hide();
+    });
+    //When someone clicks the page three navigation link
+    $('#menu-page-three').click(function () {
+      $('#page-one').hide();
+      $('#page-two').hide();
+      $('#page-three').show();
+      $('#page-four').hide();
+    });
+    //When someone clicks the page four navigation link
+    $('#menu-page-four').click(function () {
+      $('#page-one').hide();
+      $('#page-two').hide();
+      $('#page-three').hide();
+      $('#page-four').show();
     });
   </script>
 

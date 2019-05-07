@@ -1,4 +1,4 @@
-Dette er en lille app der gør brug af 2 API'er med jQuery: 
+Want som fun? er navnet på denne lille app der gør brug af 2 API'er med jQuery: 
 
 <ul>
 <li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>

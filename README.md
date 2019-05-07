@@ -19,7 +19,7 @@ Materialize.css til at skabe layoutet på min app hvor dataen vises til sidst.
 For at se denne app, skal du først downloade projektet og åbne index.html i din brower (eller bare åbne projektet via nedenstående link). 
 
 <ul>
-<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/#"></a></li>
+<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/"></a></li>
 </ul>
 
 Derefter kan du se en lille app med 4 forskellige sider. Den første side giver en ideer, hvis man keder sig.

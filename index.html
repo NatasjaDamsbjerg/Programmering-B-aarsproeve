@@ -124,29 +124,37 @@
       <div class="row">
         <div class="col s12 m6">
           <h4>Name generator</h4>
-          <p>Here you can get a random name by first choosing a gender. It will then get you a random name 
+          <p>Here you can get a random name by first choosing a gender. It will then give you a random name 
             from somewhere in the world. If you are not happy with the given name, just click the button again.
+            You can also get an entire new identity by clocking the "Identity" button. 
           </p>
         </div>
       </div>
       <div class="row">
           <div class="col s12 m3">
               <!--Her opretter jeg en knap man kan klikke på hvorefter noget data fra en bestemt side dukker op-->
-            <a class="waves-effect waves-light btn-large" onclick="getRandomFemalename('random?auth=null')">
+            <a class="waves-effect waves-light btn-small" onclick="getRandomFemalename('random?auth=null')">
               <!--Indsætter et icon på knappen og et navn-->
               <i class="material-icons right">add</i>Female</a>
           </div>
         </div>
         <div class="row">
             <div class="col s12 m3">
-              <a class="waves-effect waves-light btn-large" onclick="getRandomMalename('random?auth=null')">
+              <a class="waves-effect waves-light btn-small" onclick="getRandomMalename('random?auth=null')">
                 <i class="material-icons right">call_made</i>Male</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m3">
+              <a class="waves-effect waves-light btn-small" onclick="getNewIdentity('random?auth=null')">
+                <i class="material-icons right">face</i>Identity</a>
             </div>
           </div>
       <div id="api-component-page-three">
       </div>
     </div>
 
+    <!--Her "tegner" jeg hvordan det visuelle på side fire skal se ud-->
     <div id="page-four">
         <div class="row">
           <div class="col s12 m6">
@@ -223,6 +231,23 @@
         </div>
       </div>
 </script>
+<script id="api-card-template-three2" type="text/x-handlebars-template">
+  <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">{{name}} {{surname}}</span>
+            <p>Gender: {{gender}}</p>
+            <p>Region: {{region}}</p>
+            <p>Age: {{age}}</p>
+            <p>Title: {{title}}</p>
+            <p>Email: {{email}}</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
 <script id="api-card-template-four" type="text/x-handlebars-template">
   <div class="row">
       <div class="col s12 m6">
@@ -253,6 +278,9 @@
     // Setup handlebars for third API card
     var apiSourceThree = $("#api-card-template-three").html();
     var apiTemplateThree = Handlebars.compile(apiSourceThree);
+
+    var apiSourceThree2 = $("#api-card-template-three2").html();
+    var apiTemplateThree2 = Handlebars.compile(apiSourceThree2);
 
     // Setup handlebars for fourth API card
     var apiSourceFour = $("#api-card-template-four").html();
@@ -292,6 +320,15 @@
       }).done(function (data) {
         console.log(data);
         $('#api-component-page-three').html(apiTemplateThree(data));
+      });
+    }
+
+    function getNewIdentity() {
+      $.ajax({
+        url: "https://uinames.com/api/?ext",
+      }).done(function (data) {
+        console.log(data);
+        $('#api-component-page-three').html(apiTemplateThree2(data));
       });
     }
 

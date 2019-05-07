@@ -16,9 +16,13 @@ Handlebars.js til at "putte" dataen ind i nogle templates.
 
 Materialize.css til at skabe layoutet på min app hvor dataen vises til sidst.
 
-For at se denne app, skal du først downloade projektet og åbne index.html i din brower (eller bare åbne projektet via nedenstående link). Derefter kan du se
+For at se denne app, skal du først downloade projektet og åbne index.html i din brower (eller bare åbne projektet via nedenstående link). 
 
-To get started, download the project and open index.html in your browser as well as in a code editor. Study the structure to get an overall picture of how handlebars, jQuery and Materialize work together to show the results from the API queries. 
+<ul>
+<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/#"></a></li>
+</ul>
 
-Use the template to create your own app with an API of your liking or needs. 
+Derefter kan du se en lille app med 4 forskellige sider. Den første side giver en ideer, hvis man keder sig.
+Den anden side er bare linket til forskellige API'er. Den trejde sider er en name generator, der giver tilfældige navne ud fra forskellieg parametre. Den fjerede side er en joke generator, der kommer med tilfældige jokes. 
+ 
       

@@ -24,9 +24,9 @@ Sådan virker siden:
 <ul>
 <li>(jQuery) $.ajax henter data fra:
 <ul>
-<li><a href="https://www.boredapi.com/api/activity">Dette link føre til en API der generere aktiviteter</a></li>
-<li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>
-<li><a href="https://github.com/thm/uinames">Dette link føre til en API der generere navne</a></li>
+<li><a href="https://www.boredapi.com/api/activity">En API der generere aktiviteter</a></li>
+<li><a href="https://github.com/15Dkatz/official_joke_api">En API der generere jokes</a></li>
+<li><a href="https://github.com/thm/uinames">En API der generere navne</a></li>
 </ul></li>
 </ul>
 
@@ -38,15 +38,25 @@ Sådan virker siden:
 <li>(Materialize.css) viser aktiviteter i et "card component" layout</li>
 </ul> 
 
-Jeg bruger:
-
-Javascript-biblioteket jQuery, som her bruges til at indhente dataen fra de to eksterne API'er.
-
-Handlebars.js til at "putte" dataen ind i nogle templates.
-
-Materialize.css til at skabe layoutet på min app hvor dataen vises til sidst.
-
 Derefter kan du se en lille app med 4 forskellige sider. Den første side giver en ideer, hvis man keder sig.
 Den anden side er bare linket til forskellige API'er. Den trejde sider er en name generator, der giver tilfældige navne ud fra forskellieg parametre. Den fjerede side er en joke generator, der kommer med tilfældige jokes. 
+
+Jeg bruger:
+
+Javascript-biblioteket jQuery:
+<ul>
+<li>Bruges i denne app til at indhente dataen fra to eksterne API'er</li>
+</ul>
+
+Handlebars.js:
+<ul>
+<li>Bruges til at anvende HTML struktur til API'ers JSON resultat. ALtså "putte" dataen ind i nogle templates</li>
+</ul>
+
+Materialize.css:
+<ul>
+<li>Bruges til at skabe layoutet på min app, så dataen vises på en pæn måde til sidst</li>
+</ul>
+
  
       

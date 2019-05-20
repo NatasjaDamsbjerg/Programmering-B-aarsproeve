@@ -12,7 +12,7 @@ Denne app er bygget op af forskellige scripts, som er importeret til min app.
 Sådan virker siden:
 
 <ul>
-<a>Siden loader og henter .js og .css ressourser fra cdn</a>
+<li>Siden loader og henter .js og .css ressourser fra cdn</li>
 </ul>
 
 

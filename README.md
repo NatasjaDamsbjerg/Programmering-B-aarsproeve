@@ -2,9 +2,7 @@
 <p>Programmering<p>
 <p>Årsprøve<p>
 
-<ul>
 <a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/">https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/</a>
-</ul>
 
 Denne app er bygget op af forskellige scripts, som er importeret til min app.
 "Names and jokes" er navnet på denne lille app, der gør brug af to eksterne Javascript libraries, en css boilerplate og tre API'er. 

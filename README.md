@@ -7,24 +7,40 @@
 </ul>
 
 Denne app er bygget op af forskellige scripts, som er importeret til min app.
-"Names and jokes" er navnet på denne lille app, der gør brug af to eksterne Javascript libraries, en css boilerplate og to API'er. 
+"Names and jokes" er navnet på denne lille app, der gør brug af to eksterne Javascript libraries, en css boilerplate og tre API'er. 
 
 Sådan virker siden:
 
 <ul>
-<li>Siden loader og henter .js og .css ressourser fra cdn</li>
+<li>Siden loader og henter .js og .css ressourser fra cdn.</li>
 </ul>
-
 
 <ul>
-<li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>
-<li><a href="https://github.com/thm/uinames">Dette link føre til en API der generere navne</a></li>
+<li>Handlebars.js opsætter en skabelon for random activity.</li>
 </ul>
 
-Denne app er bygget op af forskellige scripts som er importeret til min app. 
-Jeg gør brug af de to eksterne API'er jeg nævnte i ovenstående, som indeholder den data der skal vises i min app.
+<ul>
+<li>(jQuery document ready event listener) viser div id="page one", og skjuler de andre sider.</li>
+</ul>
 
-Derudover bruger jeg: 
+<ul>
+<li>(jQuery) $.ajax henter data fra:
+<ul>
+<li><a href="https://www.boredapi.com/api/activity"></a>Dette link føre til en API der generere aktiviteter</li>
+<li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>
+<li><a href="https://github.com/thm/uinames">Dette link føre til en API der generere navne</a></li>
+</ul></li>
+</ul>
+
+<ul>
+<li>(jQuery ajax response) fylder handlebar-skabelonen med JSON.</li>
+</ul>
+
+<ul>
+<li>(Materialize.css) viser aktiviteter i et "card component" layout</li>
+</ul> 
+
+Jeg bruger:
 
 Javascript-biblioteket jQuery, som her bruges til at indhente dataen fra de to eksterne API'er.
 

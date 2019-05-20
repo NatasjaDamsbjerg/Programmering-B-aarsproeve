@@ -3,7 +3,7 @@
 <p>Årsprøve<p>
 
 <ul>
-<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/">https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/</a></li>
+<a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/">https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/</a>
 </ul>
 
 Denne app er bygget op af forskellige scripts, som er importeret til min app.
@@ -26,7 +26,7 @@ Sådan virker siden:
 <ul>
 <li>(jQuery) $.ajax henter data fra:
 <ul>
-<li><a href="https://www.boredapi.com/api/activity"></a>Dette link føre til en API der generere aktiviteter</li>
+<li><a href="https://www.boredapi.com/api/activity">Dette link føre til en API der generere aktiviteter</a></li>
 <li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>
 <li><a href="https://github.com/thm/uinames">Dette link føre til en API der generere navne</a></li>
 </ul></li>

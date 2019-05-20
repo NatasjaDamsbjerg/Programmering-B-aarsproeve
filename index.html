@@ -167,6 +167,10 @@
               <a class="waves-effect waves-light btn-large" onclick="getRandomJoke('random?auth=null')">
                 <i class="material-icons right">insert_emoticon</i>Joke</a>
             </div>
+            <div style="display: none" class="col s12 m3" id="punchlineButton">
+              <a class="waves-effect waves-light btn-large" onclick="showPunchline()">
+                <i class="material-icons right">insert_emoticon</i>Punch</a>
+            </div>
           </div>
         <div id="api-component-page-four">
         </div>
@@ -255,7 +259,8 @@
           <div class="card-content white-text">
             <span class="card-title">Type: {{type}}</span>
             <p>{{setup}}</p>
-            <p>Punchline: {{punchline}}</p>
+            <br>
+            <p style="display: none" id="punchline">{{punchline}}</p>
           </div>
           </div>
         </div>
@@ -337,8 +342,13 @@
         url: "https://official-joke-api.appspot.com/random_joke",
       }).done(function (data) {
         console.log(data);
+        document.getElementById('punchlineButton').style.display = 'block';
         $('#api-component-page-four').html(apiTemplateFour(data));
       });
+    }
+
+    function showPunchline() {
+      document.getElementById('punchline').style.display = 'block';
     }
 
     //Handle menu - first show page one no matter what

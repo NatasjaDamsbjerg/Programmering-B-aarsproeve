@@ -1,4 +1,17 @@
-Want som fun? er navnet på denne lille app der gør brug af 2 API'er med jQuery: 
+<p>Natasja Damsbjerg<p>
+<p>Programmering<p>
+<p>Årsprøve<p>
+
+<ul>
+<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/">https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/</a></li>
+</ul>
+
+Denne app er bygget op af forskellige scripts, som er importeret til min app.
+"Names and jokes" er navnet på denne lille app, der gør brug af to eksterne Javascript libraries, en css boilerplate og to API'er. 
+
+Sådan virker siden:
+
+
 
 <ul>
 <li><a href="https://github.com/15Dkatz/official_joke_api">Dette link føre til en API der generere jokes</a></li>
@@ -15,12 +28,6 @@ Javascript-biblioteket jQuery, som her bruges til at indhente dataen fra de to e
 Handlebars.js til at "putte" dataen ind i nogle templates.
 
 Materialize.css til at skabe layoutet på min app hvor dataen vises til sidst.
-
-For at se denne app, skal du først downloade projektet og åbne index.html i din brower (eller bare åbne projektet via nedenstående link). 
-
-<ul>
-<li><a href="https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/">https://natasjadamsbjerg.github.io/Programmering-B-aarsproeve/</a></li>
-</ul>
 
 Derefter kan du se en lille app med 4 forskellige sider. Den første side giver en ideer, hvis man keder sig.
 Den anden side er bare linket til forskellige API'er. Den trejde sider er en name generator, der giver tilfældige navne ud fra forskellieg parametre. Den fjerede side er en joke generator, der kommer med tilfældige jokes. 
